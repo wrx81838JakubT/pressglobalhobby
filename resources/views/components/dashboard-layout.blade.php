@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="pressglobal hobby">
 	<title>Pressglobal.pl</title>
-	@vite(['resources/css/app.css'], ['resources/js/app.js'], ['resources/js/post.js'])
+	@vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/post.js'])
 	@vite(['resources/js/post.js'])
 	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
