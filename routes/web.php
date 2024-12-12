@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\http\Controllers\AuthController;
-use App\http\Controllers\CathegoryController;
-use App\http\Controllers\PostController;
-use App\http\Controllers\IndexController;
-use App\http\Controllers\DashboardController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CathegoryController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\DashboardController;
+
 
 Route::redirect('/', '/hobby');
 Route::get('/hobby', [IndexController::class, 'index'])->name('index');
@@ -14,7 +15,6 @@ Route::get('/search', [IndexController::class, 'search'])->name('search');
 
 Route::resource('cathegory', CathegoryController::class);
 Route::resource('post', PostController::class);
-Route::resource('image', ImageController::class);
 
 
 Route::middleware('auth')->group(function(){

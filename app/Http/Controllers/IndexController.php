@@ -10,6 +10,7 @@ class IndexController extends Controller
 {
     public function index()
     {
+		
         $cats = Cathegory::get();
 		$posts = Post::get();
 		$posts_recent = Post::latest()->get();

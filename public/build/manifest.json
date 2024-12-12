@@ -1,0 +1,24 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-D8E0snyc.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/dropdown.css": {
+    "file": "assets/dropdown-DyNbZPbI.css",
+    "src": "resources/css/dropdown.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CP_V1RIc.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/post.js": {
+    "file": "assets/post-XQxVTQSO.js",
+    "name": "post",
+    "src": "resources/js/post.js",
+    "isEntry": true
+  }
+}
