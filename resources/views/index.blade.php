@@ -15,7 +15,7 @@
 				<div class="slideshow-container grid col-span-3 w-full">
 					@foreach($posts_recent->take(4) as $post)
 						<div class="mySlides w-full fade">
-							<img src="{{ asset('storage/' . $post->image) }}" class="max-h-[350px] w-full object-cover overflow-hidden">
+							<a href="{{ route('post.show', $post) }}"><img src="{{ asset('storage/' . $post->image) }}" class="max-h-[350px] w-full object-cover overflow-hidden"></a>
 							<div class="absolute bottom-16 w-3/4 text-white p-1 text-wrap text-lg font-medium" style="left: 12.5%;">
 								<div style="text-align:center; background-color: rgb(0,0,0,0.5);">{{$post->title}}</div>
 								
@@ -24,16 +24,16 @@
 					@endforeach
 					<div id="imgnav" class="flex flex-row justify-center absolute bottom-0 w-3/4 mt-4" style="left: 12.5%;">
 						@foreach($posts_recent->take(1) as $post)
-							<img id="1" onclick="currentSlide(this.id)" src="{{ asset('storage/' . $post->image) }}" class="max-h-14 mr-2 mb-1" style="opacity: 0.5">
+							<a href="{{ route('post.show', $post) }}"><img id="1" onclick="currentSlide(this.id)" src="{{ asset('storage/' . $post->image) }}" class="max-h-14 mr-2 mb-1" style="opacity: 0.5"></a>
 						@endforeach
 						@foreach($posts_recent->skip(1)->take(1) as $post)
-							<img id="2" onclick="currentSlide(this.id)" src="{{ asset('storage/' . $post->image) }}" class="max-h-14 mr-2 mb-1" style="opacity: 0.5">
+							<a href="{{ route('post.show', $post) }}"><img id="2" onclick="currentSlide(this.id)" src="{{ asset('storage/' . $post->image) }}" class="max-h-14 mr-2 mb-1" style="opacity: 0.5"></a>
 						@endforeach
 						@foreach($posts_recent->skip(2)->take(1) as $post)
-							<img id="3" onclick="currentSlide(this.id)" src="{{ asset('storage/' . $post->image) }}" class="max-h-14 mr-2 mb-1" style="opacity: 0.5">
+							<a href="{{ route('post.show', $post) }}"><img id="3" onclick="currentSlide(this.id)" src="{{ asset('storage/' . $post->image) }}" class="max-h-14 mr-2 mb-1" style="opacity: 0.5"></a>
 						@endforeach
 						@foreach($posts_recent->skip(3)->take(1) as $post)
-							<img id="4" onclick="currentSlide(this.id)" src="{{ asset('storage/' . $post->image) }}" class="max-h-14 mr-2 mb-1" style="opacity: 0.5">
+							<a href="{{ route('post.show', $post) }}"><img id="4" onclick="currentSlide(this.id)" src="{{ asset('storage/' . $post->image) }}" class="max-h-14 mr-2 mb-1" style="opacity: 0.5"></a>
 						@endforeach
 					</div>
 				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>

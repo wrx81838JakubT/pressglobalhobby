@@ -20,10 +20,10 @@
 			</div>
 		@endforeach
 	</div>
-	<div class="grid col-span-2">
+	<div class="col-span-2">
 	<div>
 		<h3 class="text-2xl text-nowrap font-medium text-[#316AC4] px-8 pt-4 justify-center mb-2">INNE WIADOMOŚCI</h3>
-		<div class="w-full border-t-[2px] border-t-[#316AC4]">
+		<div class="w-full border-t-[2px] border-t-[#316AC4] break-words">
 			<ul class="w-full text-[#316AC4] list-disc p-2 pl-8">
 				@foreach($posts_recent as $post)
 					<a href="{{ route('post.show', $post) }}"><li class="w-full">{{ $post->title }}</li></a>
