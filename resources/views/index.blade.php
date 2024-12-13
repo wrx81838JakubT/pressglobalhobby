@@ -222,7 +222,7 @@
 		</div>
 		<div id="Inne Typowe">
 		@foreach($cats->where('parent', 'Inne Typowe')->all() as $cat)
-			<div id="{{ $cat->name }}" class="flex flex-col lg:grid lg:grid-cols-3 w-full pb-6 px-4 w-full" @if($cat->name == 'Czytanie Książek') style="display: grid;" @else style="display: none;" @endif">
+			<div id="{{ $cat->name }}" class="flex flex-col lg:grid lg:grid-cols-3 gap-6 w-full pb-6 px-4 w-full" @if($cat->name == 'Czytanie Książek') style="display: grid;" @else style="display: none;" @endif">
 				@if($posts_recent->where('cathegory_name', $cat->name)->first() != null)
 					@foreach($posts_recent->where('cathegory_name', $cat->name)->take(3) as $post)
 						<div class="grid col-span-1 w-full">
