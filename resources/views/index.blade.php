@@ -55,7 +55,7 @@
 					@endforeach
 					<ul class="w-full text-[#316AC4] list-disc p-2 pl-8">
 					@foreach($posts_recent->skip(6)->take(4) as $post)
-						<li class="mb-2"><a href="{{ route('post.show', $post) }}"><span class="text-[#316AC4]">{{ $post->title }}</span></a></li>
+						<li class="mb-2"><a href="{{ route('post.show', $post) }}"><span class="text-[#316AC4]">{{ Str::words($post->title, 10) }}</span></a></li>
 					@endforeach
 					</ul>
 				</div>
