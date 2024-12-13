@@ -230,7 +230,7 @@
 								<a href="{{ route('post.show', $posts_recent->where('cathegory_name', $cat->name)->first()) }}">
 								<img src="{{ asset('storage/' . $posts_recent->where('cathegory_name', $cat->name)->first()->image)}}" class="max-h-[350px] object-cover overflow-hidden">
 								<p class="absolute bottom-0 bg-[#316AC4] w-full text-white p-1 text-wrap text-lg font-bold">
-									{{ $posts_recent->where('cathegory_name', $cat->name)->first()->title }}<br>
+									{{ Str::words($posts_recent->where('cathegory_name', $cat->name)->first()->title, 10) }}<br>
 									<span class="font-normal">{{ Str::words($posts_recent->where('cathegory_name', $cat->name)->first()->header, 10) }}</span>
 									</p></a>
 							</div>

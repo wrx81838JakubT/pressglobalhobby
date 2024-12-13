@@ -107,7 +107,7 @@ class PostController extends Controller
         $request->validate([
 			'title' => ['required', 'max:255'],
 			'body' => ['required'],
-			'image' => ['required', 'file', 'max:10000', 'mimes:png,jpg,webp'],
+			'image' => ['file', 'max:10000', 'mimes:png,jpg,webp'],
 			'header' => ['required'],
 			'author' => ['required', 'max:255'],
 			'image_desc' => ['required'],
