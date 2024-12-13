@@ -68,7 +68,7 @@ class PostController extends Controller
 			'source' => $request->source
 		]);
 		
-		return redirect(route('dashboard'))->with('success', 'Your post was created successfully.');
+		return redirect(route('dashboard'))->with('success', 'Artykuł został stworzony pomyślnie.');
     }
 
     /**
@@ -140,7 +140,7 @@ class PostController extends Controller
 			'source' => $request->source
 		]);
 		
-		return redirect(route('dashboard'))->with('success', 'Your post was updated successfully.');
+		return redirect(route('dashboard'))->with('success', 'Zmiany zostały zapisane.');
     }
 
     /**
